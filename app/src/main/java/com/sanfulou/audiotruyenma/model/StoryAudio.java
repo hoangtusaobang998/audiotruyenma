@@ -2,14 +2,34 @@ package com.sanfulou.audiotruyenma.model;
 
 public class StoryAudio {
 
-    public String url;
-    public String title;
-    public String img;
+    private String url;
+    private String title;
+    private String img;
+    private Pname pname;
+    private AudioInfo audioInfo;
 
-    public StoryAudio(String url, String title, String img) {
+    public StoryAudio(String url, String title, String img, Pname pname, AudioInfo audioInfo) {
         this.url = url;
         this.title = title;
         this.img = img;
+        this.pname = pname;
+        this.audioInfo = audioInfo;
+    }
+
+    public Pname getPname() {
+        return pname;
+    }
+
+    public void setPname(Pname pname) {
+        this.pname = pname;
+    }
+
+    public AudioInfo getAudioInfo() {
+        return audioInfo;
+    }
+
+    public void setAudioInfo(AudioInfo audioInfo) {
+        this.audioInfo = audioInfo;
     }
 
     public String getUrl() {
@@ -36,11 +56,11 @@ public class StoryAudio {
         this.img = img;
     }
 
-    public class Pname {
-        public String title;
-        public String tacgia;
+    public static class Pname {
+        private String title;
+        private String tacgia;
 
-        public Pname(String title, String tacgia) {
+        public  Pname(String title, String tacgia) {
             this.title = title;
             this.tacgia = tacgia;
         }
@@ -62,10 +82,10 @@ public class StoryAudio {
         }
     }
 
-    public class AudioInfo {
-        public String time;
-        public String phan;
-        public String luotnghe;
+    public static class AudioInfo {
+        private String time;
+        private String phan;
+        private String luotnghe;
 
         public AudioInfo(String time, String phan, String luotnghe) {
             this.time = time;
